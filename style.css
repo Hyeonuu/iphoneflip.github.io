@@ -1,0 +1,384 @@
+html{
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+}
+body{
+    background: black;
+    margin: 0;
+    padding: 0;
+
+}
+
+.mianBar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-left: 14%;
+    padding-right: 14%;
+    cursor: pointer;
+    font-size: 11px;
+    color: #b8b5b5;
+    margin-bottom: 2vh;
+}
+.barLeft, .barRight{display: flex;}
+.apple{width: 20px;height: 20px;}
+.apple:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.search{filter: invert(120%);width: 20px;height: 20px;}
+.search:hover{filter: brightness(200%);transition: filter 0.3s ease;}
+.back{filter:invert(60%);width: 20px;height: 20px;}
+.back:hover{filter: invert(200%);transition: filter 0.3s ease;}
+
+.store:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.mac:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.ipad:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.iphone:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.watch:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.vision:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.airpods:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.tvhome:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.entertainment:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.accessories:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+.support:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+
+.underBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 14%;
+    padding-right: 14%;
+}
+.underBarLeft{
+    font-size: 10px;
+    color: rgb(214, 210, 210);
+    cursor: pointer;
+}
+.underBarRight{
+    font-size: 11px;
+    color: #b8b5b5;
+    word-spacing: 20px;
+}
+.android:hover{
+    color: #0070c9;
+    cursor: pointer;
+}
+.using:hover{
+    color: #0070c9;
+    cursor: pointer;
+}
+.buyBtn{
+    border-radius: 50px;
+    background-color: #0070c9;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 13px;
+    transition: background-color 0.3s ease;
+}
+.buyBtn:hover{
+    background-color: #005cdf;
+    cursor: pointer;
+}
+
+.ad{
+    border-top: 1px solid rgb(88, 88, 88);
+    background-color: rgb(29, 29, 29);
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+.ad1, .ad2{
+    text-align: center;
+}
+.nowWatch{
+    color: #005cdf;
+    cursor: pointer;
+}
+.nowWatch:hover{
+    text-decoration: underline;
+    transition: filter 0.3s ease;
+}
+.mainSection{
+    padding-top: 5vh;
+}
+.mainSection-Bar{
+    color: #b8b5b5;
+    font-size: 9.5vh;
+    font-weight: bolder;
+    padding-left: 3vh;
+    margin-bottom: 5%;
+}
+.fadeImage{
+    opacity: 0;
+    transition: opacity 4s ease;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fadeImage img.iphonflip{
+    object-fit: cover;
+    width: 120%;
+    height: 120%;
+}
+
+.fadeImageUnder{
+    background-color: rgb(29, 29, 29);
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.MaxPro{
+    color: #e2e2e2;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.money{
+    color: #b8b5b5;
+    font-weight: bolder;
+    margin-bottom: 40px;
+
+}
+.buyBtn2{
+    border-radius: 50px;
+    background-color: #0070c9;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 13px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.buyBtn2:hover{
+    background-color: #005cdf;
+    cursor: pointer;
+}
+
+.contain{
+    position: relative;
+    /* display: inline-block; */
+}
+.takepicture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.image-text{
+    position: absolute;
+    top: 11%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+.actionmode{
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.image-text{
+    color: white;
+    font-weight: bolder;
+    margin: 0;
+    line-height: 0.5;
+}
+.image-text1{
+    font-size: 20px;
+}
+.image-text2{
+    font-size: 45px;
+}
+.image-text3{
+    font-size: 45px;
+}
+
+.section02{
+    display: flex;
+    justify-content: center;
+}
+.section02-text-left, .section02-text-right{
+    color: #969696;
+    font-weight: bold;
+    line-height: 40%;
+    padding-top: 140px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+.bold{
+    filter: brightness(150%);
+}
+.section02-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 3s ease, transform 1s ease;
+}
+.space{
+    background: rgb(29, 29, 29);
+    width: 100%;
+    height: 45px;
+}
+.section03{
+    padding-left: 7%;
+    text-align: start;
+}
+.section03-text01, .section03-text02{
+    color: #cecdcd;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 13px;
+}
+.section03-text03, .section03-text04{
+    color: #969696;
+    font-weight: bold;
+    line-height: 5px;
+}
+.section03-text03-point{
+    color: #cecdcd;
+}
+.section03-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.section03-02 {
+    margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section03-02-text{
+    position: absolute;
+    color: #969696;
+    padding-left: 25%;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 10px;
+}
+.section03-02-image{
+    padding-left: 20%;
+}
+.section03-02-text-point{
+    filter: brightness(150%);
+}
+.section03-03-text{
+    text-align: center;
+    padding-top: 20%;
+    padding-bottom: 10%;
+    color: #969696;
+    font-weight: bold;
+}
+.section03-03-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+
+
+.footer{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-top: 1px solid #4b4a4a;
+    display: flex;
+    background-color: rgb(20, 20, 20);
+}
+.footerLeft{
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #969696;
+    font-size: 12.5px;
+}
+.footerCenter{
+    display: flex;
+    color: #c7c7c7;
+    font-size: 10.5px;
+    cursor: pointer;
+}
+.footerCenterA{
+    padding-right: 10px;
+    border-right: 1px solid #4b4a4a;
+}
+.footerCenterB{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #4b4a4a;
+}
+.footerCenterC{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #4b4a4a;
+}
+.footerCenterD{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #4b4a4a;
+}
+.footerCenterE{
+    padding-left: 10px;
+}
+.footerCenterA:hover{
+    text-decoration: underline;
+}
+.footerCenterB:hover{
+    text-decoration: underline;
+}
+.footerCenterC:hover{
+    text-decoration: underline;
+}
+.footerCenterD:hover{
+    text-decoration: underline;
+}
+.footerCenterE:hover{
+    text-decoration: underline;
+}
+.footerRight{
+    position: absolute;
+    right: 30px;
+    font-size: 12px;
+    color: #c7c7c7;
+    cursor: pointer;
+}
+
+@media(max-width: 850px){
+    .store,.mac,.ipad,.iphone,.watch,.vision,
+    .airpods,.tvhome,.entertainment,.accessories,
+    .support{opacity: 0;}
+
+    .geyo, .android, .using{
+        opacity: 0;
+    }
+    .search{
+        margin-right: 10px;
+    }
+    .mainSection-Bar{
+        text-align: center;
+    }
+}
