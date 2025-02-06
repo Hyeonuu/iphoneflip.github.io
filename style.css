@@ -107,6 +107,7 @@ body{
     padding-top: 5vh;
 }
 .mainSection-Bar{
+    text-align: center;
     color: #b8b5b5;
     font-size: 9.5vh;
     font-weight: bolder;
@@ -241,25 +242,38 @@ body{
 }
 .section03-text01, .section03-text02{
     color: #cecdcd;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     font-size: 50px;
     font-weight: bold;
     line-height: 13px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 3s ease, transform 1s ease;
 }
 .section03-text03, .section03-text04{
     color: #969696;
     font-weight: bold;
     line-height: 5px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 5s ease, transform 2s ease;
 }
 .section03-text03-point{
     color: #cecdcd;
 }
 .section03-image{
+    margin-top: 10vh;
+    margin-bottom: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 7s ease, transform 3s ease;
 }
 
 .section03-02 {
@@ -277,7 +291,9 @@ body{
     line-height: 10px;
 }
 .section03-02-image{
-    padding-left: 20%;
+    padding-left: 30%;
+    height: 80%;
+    width: auto;
 }
 .section03-02-text-point{
     filter: brightness(150%);
@@ -297,10 +313,6 @@ body{
     height: 100%;
     overflow: hidden;
 }
-
-
-
-
 
 .footer{
     padding-left: 10px;
@@ -370,7 +382,9 @@ body{
 @media(max-width: 850px){
     .store,.mac,.ipad,.iphone,.watch,.vision,
     .airpods,.tvhome,.entertainment,.accessories,
-    .support{opacity: 0;}
+    .support,
+    .footerCenterA,.footerCenterB,.footerCenterC,.footerCenterD,
+    .footerCenterE{opacity: 0;}
 
     .geyo, .android, .using{
         opacity: 0;
