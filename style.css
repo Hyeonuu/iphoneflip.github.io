@@ -9,7 +9,7 @@ body{
 
 }
 
-.mianBar{
+.mainBar{
     position: relative;
     display: flex;
     align-items: center;
@@ -19,9 +19,14 @@ body{
     padding-right: 14%;
     cursor: pointer;
     font-size: .6875rem;
-    color: #b8b5b5;
     margin-bottom: 2vh;
 }
+
+.mainBar a{
+    color: #b8b5b5;
+    text-decoration: none;
+}
+
 .barLeft, .barRight{display: flex;}
 .apple{width: 1.25rem;height: 1.25rem;}
 .apple:hover{filter: brightness(150%);transition: filter 0.3s ease;}
@@ -51,14 +56,19 @@ body{
 }
 .underBarLeft{
     font-size: .625rem;
-    color: rgb(214, 210, 210);
-    cursor: pointer;
 }
+
+.underBarRight a {
+    color: rgb(214, 210, 210);
+    text-decoration: none;
+}
+
 .underBarRight{
     font-size: .6875rem;
     color: #b8b5b5;
     word-spacing: 1.25rem;
 }
+
 .android:hover{
     color: #0070c9;
     cursor: pointer;
@@ -75,6 +85,7 @@ body{
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.2);
     padding: .3125rem .8125rem;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 .buyBtn:hover{
     background-color: #005cdf;
@@ -106,6 +117,7 @@ body{
 
 .nowWatch-buy{
     margin-top: 30px;
+    text-decoration: none;
 }
 
 .mainSection{
@@ -143,6 +155,11 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.fadeImageUnder a{
+    text-decoration: none;
+}
+
 .MaxPro{
     color: #e2e2e2;
     font-size: 1.5625rem;
@@ -225,6 +242,7 @@ body{
 .bold{
     filter: brightness(150%);
 }
+
 .section02-image{
     display: flex;
     justify-content: center;
@@ -235,7 +253,9 @@ body{
     opacity: 0;
     transform: translateY(3.125rem);
     transition: opacity 3s ease, transform 1s ease;
+    margin-bottom: 10vh;
 }
+
 .space{
     background: rgb(29, 29, 29);
     width: 100%;
@@ -243,6 +263,7 @@ body{
 }
 .section03{
     padding-left: 7%;
+    padding-top: 3vh;
     text-align: start;
 }
 .section03-text01, .section03-text02{
@@ -381,7 +402,7 @@ body{
 }
 
 .section05-text02{
-    margin-top: 3.5%;
+    margin-top: 3.8%;
     margin-left: -100%;
     text-align: center;
 }
@@ -432,7 +453,7 @@ body{
 
 .iphone-menu{
     background-color: #161617;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     text-align: center;
 }
@@ -444,31 +465,30 @@ body{
     padding-left: 10%;
 }
 
-.category-title{
-    margin-left: -20%;
-    color: rgba(210, 210, 215, 0.559);
-}
-
 .category-gener{
-    margin-top: 50px;
+    padding-top: 20%;
+    margin-left: -11%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 20px;
     text-align: left;
 }
 
+.category-title{
+    color: rgba(210, 210, 215, 0.559);
+}
+
 .category01,.category02,.category03 {
-    padding-top: 80%;
-    margin-left: -33%;
+
     width: 100%;
 }
 
 .category-text{
     font-size: 30px;
-    margin-left: -20%;
-    margin-bottom: -15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    display: block;
 }
 
 .category-text, .iphone-menu h1 {
@@ -542,6 +562,53 @@ body{
     cursor: pointer;
 }
 
+.prepare-contain{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+}
+
+.prepare-image{
+    display: block;
+    text-align: center;
+    height: 30vh;
+}
+
+.prepare-text{
+    color: #c7c7c7;
+    text-align: center;
+    font-size: 15px;
+}
+
+.loading-contain {
+    width: 20vh;
+    height: 0.7vh;
+    background-color: black;
+    border-radius: 15px;
+    overflow: hidden; 
+}
+
+.loading-bar {
+    height: 100%;
+    width: 0%; 
+    background-color: #c7c7c784;
+    border-radius: 15px;
+    animation: loading 5s linear infinite;  
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%; 
+    }
+}
+
+
 @media(max-width: 53.125rem){
     .store,.mac,.ipad,.iphone,.watch,.vision,
     .airpods,.tvhome,.entertainment,.accessories,
@@ -555,26 +622,148 @@ body{
     .search{
         margin-right: .625rem;
     }
+    
+    .close-btn {
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+
     .mainSection-Bar{
         text-align: center;
     }
-    .section05{
-        margin-left: 5vh;
-        margin-right: 5vh;
+
+    .fadeImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 110%;
     }
+
+    .section02-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section02-image01{
+        width: 150%;
+        height: auto;
+    }
+
+    .section05{
+        display: flex;
+        width: auto;
+        height: 75vh;
+    }
+
+    .section05-item01{
+        margin-left: 3%;
+        padding-right: 10px;
+    }
+
+    .orange {
+        font-size: 15px;
+    }
+
+    .iphoneColor01 {
+        font-size: 30px;
+    }
+
+    .iphoneColor02 {
+        font-size: 15px;
+    }
+
+    .iphoneColor03 {
+        font-size: 15px;
+    }
+
+    .section05-item02{
+        padding-right: -20%;
+    }
+
+    .section05-text02 {
+        padding-top: 40px;
+        padding-left: 10px;
+    }
+
+    .iphone-flip-preview{
+        padding-left: 150px;
+        height: auto;
+    }
+
+    .iphone16pro-preview{
+        margin-top: 80px;
+    }
+
+    .section05-text01 {
+        padding-left: 160px;
+    }
+
+    .section05-item02 {
+        margin-top: 5%;
+        padding-left: 25%;
+    }
+
+    .iphone-flip-preview {
+        width: 200%;
+        height: auto;
+    }
+
+    .iphone16pro-preview{
+        width: 60%;
+        height: auto;
+    }
+
     .iphone-show{
         margin-left: 5vh;
     }
-    /* .iphone-flip-preview{
-        margin-left: 3vh;
-        width: 500px;
-        height: auto;
+
+    .prepare-image{
+        display: block;
+        text-align: center;
+        height: 15vh;
     }
-    
-    .iphone16pro-preview{
-        margin-right: -5vh;
-        margin-top: 5vh;
-        width: 160px;
-        height: auto;    
-    } */
+
+    .loading-contain {
+        width: 13vh;
+    }
+
+    .loading-bar {
+        height: 50%; 
+    }
+
+    .prepare-text{
+        font-size: 13px;
+    }
+
+    .iphone-menu {
+        height: 50vh;
+        width: auto;
+    }
+
+    .category-gener{
+        margin-left: -135px;
+        display: flex;
+        justify-content: left;
+        gap: 5px;
+        height: auto;
+        width: 70%;
+    }
+
+    .iPhone-menu-title {
+        padding-top: 10px;
+        font-size: 300%;
+    }
+
+    .category-title{
+        font-size: 100%;
+    }
+
+    .category-text {
+        font-size: 80%;
+    }
 }

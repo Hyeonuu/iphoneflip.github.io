@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function(){
         image.style.opacity = 1;
     }, 400)
-  });
+});
 
 // section02 
 document.addEventListener('DOMContentLoaded', function() {
@@ -112,7 +112,7 @@ const observer = new IntersectionObserver(entries => {
         if (entry.isIntersecting && !hasPlayed) {
             // 동영상이 화면에 보이고 아직 재생되지 않았다면 재생 시작
             entry.target.play();
-            entry.target.playbackRate =  0.7;
+            entry.target.playbackRate =  2; // 재생 속도
             hasPlayed = true;  // 동영상이 재생되었음을 표시
         }
         
