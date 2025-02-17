@@ -1,769 +1,950 @@
-html{
-    font-family: 'Noto Sans KR', sans-serif;
-    overflow-x: hidden;
-}
-body{
-    background: black;
-    margin: 0;
-    padding: 0;
-
-}
-
-.mainBar{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1%;
-    padding-left: 14%;
-    padding-right: 14%;
-    cursor: pointer;
-    font-size: .6875rem;
-    margin-bottom: 2vh;
-}
-
-.mainBar a{
-    color: #b8b5b5;
-    text-decoration: none;
-}
-
-.barLeft, .barRight{display: flex;}
-.apple{width: 1.25rem;height: 1.25rem;}
-.apple:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.search{filter: invert(120%);width: 1.25rem;height: 1.25rem;}
-.search:hover{filter: brightness(200%);transition: filter 0.3s ease;}
-.back{filter:invert(60%);width: 1.25rem;height: 1.25rem;}
-.back:hover{filter: invert(200%);transition: filter 0.3s ease;}
-
-.store:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.mac:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.ipad:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.iphone:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.watch:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.vision:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.airpods:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.tvhome:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.entertainment:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.accessories:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-.support:hover{filter: brightness(150%);transition: filter 0.3s ease;}
-
-.underBar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 14%;
-    padding-right: 14%;
-}
-.underBarLeft{
-    font-size: .625rem;
-}
-
-.underBarRight a {
-    color: rgb(214, 210, 210);
-    text-decoration: none;
-}
-
-.underBarRight{
-    font-size: .6875rem;
-    color: #b8b5b5;
-    word-spacing: 1.25rem;
-}
-
-.android:hover{
-    color: #0070c9;
-    cursor: pointer;
-}
-.using:hover{
-    color: #0070c9;
-    cursor: pointer;
-}
-.buyBtn{
-    border-radius: 3.125rem;
-    background-color: #0070c9;
-    color: #fff;
-    border: none;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.2);
-    padding: .3125rem .8125rem;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-.buyBtn:hover{
-    background-color: #005cdf;
-    cursor: pointer;
-}
-
-.ad{
-    border-top: .0625rem solid rgb(88, 88, 88);
-    background-color: rgb(29, 29, 29);
-    height: 3.75rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: .75rem;
-}
-.ad1, .ad2{
-    text-align: center;
-}
-.nowWatch, .nowWatch-buy{
-    color: #005cdf;
-    cursor: pointer;
-}
-.nowWatch:hover, .nowWatch-buy:hover{
-    text-decoration: underline;
-    transition: filter 0.3s ease;
-}
-
-.nowWatch-buy{
-    margin-top: 30px;
-    text-decoration: none;
-}
-
-.mainSection{
-    padding-top: 5vh;
-}
-.mainSection-Bar{
-    text-align: center;
-    color: #b8b5b5;
-    font-size: 9.5vh;
-    font-weight: bolder;
-    padding-left: 3vh;
-    margin-bottom: 5%;
-}
-.fadeImage{
-    opacity: 0;
-    transition: opacity 4s ease;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.fadeImage img.iphonflip{
-    object-fit: cover;
-    width: 120%;
-    height: 120%;
-}
-
-.fadeImageUnder{
-    background-color: rgb(29, 29, 29);
-    padding: 4.375rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.fadeImageUnder a{
-    text-decoration: none;
-}
-
-.MaxPro{
-    color: #e2e2e2;
-    font-size: 1.5625rem;
-    font-weight: bolder;
-    margin-bottom: 1.25rem;
-}
-.money{
-    color: #b8b5b5;
-    font-weight: bolder;
-    margin-bottom: 2.5rem;
-
-}
-.buyBtn2{
-    border-radius: 3.125rem;
-    background-color: #0070c9;
-    color: #fff;
-    border: none;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.2);
-    padding: .3125rem .8125rem;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-.buyBtn2:hover{
-    background-color: #005cdf;
-    cursor: pointer;
-}
-
-.contain{
-    position: relative;
-    /* display: inline-block; */
-}
-.takepicture{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-.image-text{
-    position: absolute;
-    top: 6%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-}
-.actionmode{
-    color: white;
-    font-weight: bolder;
-    font-size: 1.25rem;
-}
-.image-text{
-    color: white;
-    font-weight: bolder;
-    margin: 0;
-    line-height: 0.5;
-}
-.image-text1{
-    font-size: 1.25rem;
-}
-.image-text2{
-    font-size: 2.8125rem;
-}
-.image-text3{
-    font-size: 2.8125rem;
-}
-
-.section02{
-    display: flex;
-    justify-content: center;
-}
-.section02-text-left, .section02-text-right{
-    color: #969696;
-    font-weight: bold;
-    line-height: 40%;
-    padding-top: 8.75rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    box-sizing: border-box;
-}
-.bold{
-    filter: brightness(150%);
-}
-
-.section02-image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(3.125rem);
-    transition: opacity 3s ease, transform 1s ease;
-    margin-bottom: 10vh;
-}
-
-.space{
-    background: rgb(29, 29, 29);
-    width: 100%;
-    height: 2.8125rem;
-}
-.section03{
-    padding-left: 7%;
-    padding-top: 3vh;
-    text-align: start;
-}
-.section03-text01, .section03-text02{
-    color: #cecdcd;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    font-size: 3.125rem;
-    font-weight: bold;
-    line-height: .8125rem;
-    opacity: 0;
-    transform: translateY(3.125rem);
-    transition: opacity 1s ease, transform 1s ease;
-}
-.section03-text03, .section03-text04{
-    color: #969696;
-    font-weight: bold;
-    line-height: .3125rem;
-    opacity: 0;
-    transform: translateY(3.125rem);
-    transition: opacity 2s ease, transform 2s ease;
-}
-
-.section03-image{
-    margin-top: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(3.125rem);
-    transition: opacity 5s ease, transform 3s ease;
-}
-
-.section04 {
-    margin-top: 50vh;
-    position: relative ;
-    width: 100%;
-    height: 400vh;
-}
-.section04-text01{
-    position: sticky;
-    top:40vh;
-    height: 60vh;
-    color: #cecdcd;
-    font-weight: bold;
-    font-size: 3.125rem;
-    text-align: center;
-    line-height: .3125rem;
-    margin-top: 100vh;
-    margin-bottom: 200vh;
-    opacity: 0;
-    transform: translateY(3.125rem);
-    transition: opacity 2s ease, transform 3s ease;
-}
-
-.section04-text02{
-    position: sticky;
-    top:40vh;
-    height: 60vh;
-    color: #cecdcd;
-    font-weight: bold;
-    font-size: 3.125rem;
-    text-align: center;
-    line-height: .3125rem;
-    opacity: 0;
-    transform: translateY(3.125rem);
-    transition: opacity 2s ease, transform 3s ease;
-}
-
-.section04-vid{
-    position: relative ;
-    margin-top: 50vh;
-    width: 100%;
-    height: 200vh;
-    overflow: visible;
-}
-
-.section04-video{
-    position: sticky;
-    top: -10vh;
-    height: 60%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0; 
-    transition: opacity 2s ease-in-out; 
-    background: linear-gradient(to bottom, black, #1d1d1f);
-}
-
-.section05-conta{
-    margin-top: 50vh;
-    margin-bottom: 20vh;
-    background-color: black;
-}
-
-.section05{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    text-align: center;
-    margin-left: 8vh;
-    margin-right: 8vh;
-    background-color:#1d1d1f;
-    height: 100vh;
-    border-radius: 30px;
-}
-
-.section05-item01, .section05-item02{
-    margin-top: 8vh;
-    display: flex;
-    width: 300%;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.iphone-flip-preview{
-    transform: translateX(5%);
-    width: 900px;
-    height: auto;
-}
-
-.iphone16pro-preview{
-    transform: translateX(-75%);
-    margin-top: 10vh;
-    width: 280px;
-    height: auto;    
-}
-
-.section05-text01{
-    position: absolute;
-    margin-top: 32%;
-    margin-left: 4%;
-    text-align: center;
-}
-
-.section05-text02{
-    margin-top: 3.8%;
-    margin-left: -100%;
-    text-align: center;
-}
-
-.iphone-show{
-    color: white;
-    margin-left: 8vh;
-    font-size: 2.8125rem;
-    padding-bottom: 5vh;
-}
-
-.orange{
-    color: #ff791b;
-    font-size: 14px;
-}
-
-.section05-text{
-    padding: 20px;
-    margin-left: 5vh;
-}
-
-.iphoneColor01, .iphoneColor02{
-    color: #F5F5F7;
-} 
-
-.iphoneColor01{
-    margin-top: -5px;
-    margin-bottom: 25px;
-    font-size: 35px;
-}
-
-.iphoneColor02{
-    font-size: 18px;
-    margin-bottom: 50px;
-}
-
-.iphoneColor03{
-    color: rgba(210, 210, 215, 0.559);
-    font-size: 15px;
-}
-
-.section05-text{
-    text-align: center;
-    padding-bottom: 10vh;
-    color: #969696;
-    font-weight: bold;
-}
-
-.iphone-menu{
-    background-color: #161617;
-    height: 90vh;
-    display: flex;
-    text-align: center;
-}
-
-.iPhone-menu-title{
-    font-size: 60px;
-    color: white;
-    padding-top: 10%;
-    padding-left: 10%;
-}
-
-.category-gener{
-    padding-top: 20%;
-    margin-left: -11%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    gap: 20px;
-    text-align: left;
-}
-
-.category-title{
-    color: rgba(210, 210, 215, 0.559);
-}
-
-.category01,.category02,.category03 {
-
-    width: 100%;
-}
-
-.category-text{
-    font-size: 30px;
-    margin-bottom: 15px;
-    text-decoration: none;
-    display: block;
-}
-
-.category-text, .iphone-menu h1 {
-    color: #fff;
-    white-space: nowrap;
-}
-
-.footer{
-    margin-top: 3vh;
-    padding-left: .625rem;
-    padding-top: .625rem;
-    padding-bottom: 1.25rem;
-    border-top: .0625rem solid #4b4a4a;
-    display: flex;
-    background-color: rgb(20, 20, 20);
-}
-.footerLeft{
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
-    color: #969696;
-    font-size: .7813rem;
-}
-.footerCenter{
-    display: flex;
-    color: #c7c7c7;
-    font-size: .6563rem;
-    cursor: pointer;
-}
-.footerCenterA{
-    padding-right: .625rem;
-    border-right: .0625rem solid #4b4a4a;
-}
-.footerCenterB{
-    padding-left: .625rem;
-    padding-right: .625rem;
-    border-right: .0625rem solid #4b4a4a;
-}
-.footerCenterC{
-    padding-left: .625rem;
-    padding-right: .625rem;
-    border-right: .0625rem solid #4b4a4a;
-}
-.footerCenterD{
-    padding-left: .625rem;
-    padding-right: .625rem;
-    border-right: .0625rem solid #4b4a4a;
-}
-.footerCenterE{
-    padding-left: .625rem;
-}
-.footerCenterA:hover{
-    text-decoration: underline;
-}
-.footerCenterB:hover{
-    text-decoration: underline;
-}
-.footerCenterC:hover{
-    text-decoration: underline;
-}
-.footerCenterD:hover{
-    text-decoration: underline;
-}
-.footerCenterE:hover{
-    text-decoration: underline;
-}
-.footerRight{
-    position: absolute;
-    right: 1.875rem;
-    font-size: .75rem;
-    color: #c7c7c7;
-    cursor: pointer;
-}
-
-.prepare-contain{
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    gap: 10px;
-}
-
-.prepare-image{
-    display: block;
-    text-align: center;
-    height: 30vh;
-}
-
-.prepare-text{
-    color: #c7c7c7;
-    text-align: center;
-    font-size: 15px;
-}
-
-.loading-contain {
-    width: 20vh;
-    height: 0.7vh;
-    background-color: black;
-    border-radius: 15px;
-    overflow: hidden; 
-}
-
-.loading-bar {
-    height: 100%;
-    width: 0%; 
-    background-color: #c7c7c784;
-    border-radius: 15px;
-    animation: loading 5s linear infinite;  
-}
-
-@keyframes loading {
-    0% {
-        width: 0%;
+    html{
+        font-family: 'Noto Sans KR', sans-serif;
+        overflow-x: hidden;
     }
-    100% {
-        width: 100%; 
+    body{
+        background: black;
+        margin: 0;
+        padding: 0;
     }
-}
 
+    .mainBar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: #000;
+        z-index: 10;
+        white-space: nowrap;
+    }
 
-@media(max-width: 53.125rem){
-    .store,.mac,.ipad,.iphone,.watch,.vision,
-    .airpods,.tvhome,.entertainment,.accessories,
-    .support,
-    .footerCenterA,.footerCenterB,.footerCenterC,.footerCenterD,
-    .footerCenterE{opacity: 0;}
+    .mainBar img {
+        padding-top: 5px;
+    }
 
-    .geyo, .android, .using{
+    .nav-item{
+        position: relative;
+        padding: 10px;
+    }
+
+    .nav-item a { 
+        text-decoration: none;
+        color: #b8b5b5;
+        font-size: 12px;
+    }
+
+    .dropdown {
+        position: fixed;
+        justify-content: center;
+        top: 5vh;
+        left: 0;
+        width: 100vw;
+        height: 40vh;
+        background-color: rgb(22, 22, 22);
+        padding: 80px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 100;
         opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     }
-    .search{
-        margin-right: .625rem;
+
+    
+    .dropdown.with-animation {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
     
-    .close-btn {
-        background: none;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-        margin-left: 5px;
+    .dropdown.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: none;
+    }
+    
+    .dropdown a {
+        display: block;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+    }
+    
+    .dropdown a:hover {
+        background: rgb(255, 255, 255, 0.1);
+    }
+    
+    .dropdown a{
+        font-size: 20px;
     }
 
-    .mainSection-Bar{
+    /* search-icon, back 클릭 시 드롭다운 애니메이션 */
+    .nav-item:hover .dropdown,
+    .nav-item .dropdown:hover {
+        display: block;
+    }
+
+    .dropdown-back {
+        padding-top: 20px;
+    }
+
+    .dropdown-back-text {
+        padding-left: 7px;
+    }
+
+    .dropdown-back-text p {
+        font-size: 35px;
+        color: white;
+    }
+
+    .dropdown-back-text span, a {
+        display: inline;
+        font-size: 12px;
+        color: #b8b5b5;
+    }
+
+    .dropdown-back a {
+        font-size: 12px;
+    }
+
+    .barLeft, .barRight{display: flex;}
+    .apple{width: 1.25rem;height: 1.25rem;}
+    .apple:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .search-icon{filter: invert(120%);width: 1.25rem;height: 1.25rem;}
+    .search-icon:hover{filter: brightness(200%);transition: filter 0.3s ease;}
+    .back{filter:invert(60%);width: 1.25rem;height: 1.25rem;}
+    .back:hover{filter: invert(200%);transition: filter 0.3s ease;}
+
+    .store:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .mac:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .ipad:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .iphone:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .watch:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .vision:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .airpods:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .tvhome:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .entertainment:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .accessories:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+    .support:hover{filter: brightness(150%);transition: filter 0.3s ease;}
+
+    .underBar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 14%;
+        padding-right: 14%;
+    }
+    .underBarLeft{
+        font-size: .625rem;
+    }
+
+    .underBarRight a {
+        color: rgb(214, 210, 210);
+        text-decoration: none;
+    }
+
+    .underBarRight{
+        font-size: .6875rem;
+        color: #b8b5b5;
+        word-spacing: 1.25rem;
+    }
+
+    /* 검색창 오버레이 배경 */
+    .search-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+    /* 검색창 컨테이너 */
+    .search-container {
+        flex-direction: column;
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 50%;
+        background: rgb(22, 22, 22);
+        display: flex;
+        transition: top 0.5s ease-out;
+        z-index: 11;
+    }
+
+    .search-elem {
+        padding: 60px 80px;
+    }
+
+    /* 입력창 */
+    #searchInput {
+        color: #b8b5b5;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        width: 50%;
+        font-size: 18px;
+        background: rgb(22, 22, 22);
+        border: none;
+        outline: none;
+    }
+
+    /* 검색 결과 */
+    .search-results {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        max-width: 600px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        display: none;
+    }
+
+    .search-results li {
+        list-style: none;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+    }
+
+    .search-results li:hover {
+        background: #f0f0f0;
+    }
+
+    /* 검색 아이콘 */
+    .search-icon-bar {
+        padding-top: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .android:hover{
+        color: #0070c9;
+        cursor: pointer;
+    }
+    .using:hover{
+        color: #0070c9;
+        cursor: pointer;
+    }
+    .buyBtn{
+        border-radius: 3.125rem;
+        background-color: #0070c9;
+        color: #fff;
+        border: none;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.2);
+        padding: .3125rem .8125rem;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+    .buyBtn:hover{
+        background-color: #005cdf;
+        cursor: pointer;
+    }
+
+    .ad{
+        border-top: .0625rem solid rgb(88, 88, 88);
+        background-color: rgb(29, 29, 29);
+        height: 3.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: .75rem;
+    }
+    .ad1, .ad2{
         text-align: center;
     }
+    .nowWatch, .nowWatch-buy{
+        color: #005cdf;
+        cursor: pointer;
+    }
+    .nowWatch:hover, .nowWatch-buy:hover{
+        text-decoration: underline;
+        transition: filter 0.3s ease;
+    }
 
+    .nowWatch-buy{
+        margin-top: 30px;
+        text-decoration: none;
+    }
+
+    .mainSection{
+        padding-top: 5vh;
+    }
+    .mainSection-Bar{
+        text-align: center;
+        color: #b8b5b5;
+        font-size: 9.5vh;
+        font-weight: bolder;
+        padding-left: 3vh;
+        margin-bottom: 5%;
+    }
     .fadeImage{
+        opacity: 0;
+        transition: opacity 4s ease;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: auto;
-        width: 110%;
+        z-index: 10;
+    }
+    .fadeImage img.iphonflip{
+        object-fit: cover;
+        width: 120%;
+        height: 120%;
+    }
+
+    .fadeImageUnder{
+        background-color: rgb(29, 29, 29);
+        padding: 4.375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fadeImageUnder a{
+        text-decoration: none;
+    }
+
+    .MaxPro{
+        color: #e2e2e2;
+        font-size: 1.5625rem;
+        font-weight: bolder;
+        margin-bottom: 1.25rem;
+    }
+    .money{
+        color: #b8b5b5;
+        font-weight: bolder;
+        margin-bottom: 2.5rem;
+
+    }
+    .buyBtn2{
+        border-radius: 3.125rem;
+        background-color: #0070c9;
+        color: #fff;
+        border: none;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.2);
+        padding: .3125rem .8125rem;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    .buyBtn2:hover{
+        background-color: #005cdf;
+        cursor: pointer;
+    }
+
+    .contain{
+        position: relative;
+        /* display: inline-block; */
+    }
+    .takepicture{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .image-text{
+        position: absolute;
+        top: 6%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+    }
+    .actionmode{
+        color: white;
+        font-weight: bolder;
+        font-size: 1.25rem;
+    }
+    .image-text{
+        color: white;
+        font-weight: bolder;
+        margin: 0;
+        line-height: 0.5;
+    }
+    .image-text1{
+        font-size: 1.25rem;
+    }
+    .image-text2{
+        font-size: 2.8125rem;
+    }
+    .image-text3{
+        font-size: 2.8125rem;
+    }
+
+    .section02{
+        display: flex;
+        justify-content: center;
+    }
+    .section02-text-left, .section02-text-right{
+        color: #969696;
+        font-weight: bold;
+        line-height: 40%;
+        padding-top: 8.75rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        box-sizing: border-box;
+    }
+    .bold{
+        filter: brightness(150%);
     }
 
     .section02-image{
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(3.125rem);
+        transition: opacity 3s ease, transform 1s ease;
+        margin-bottom: 10vh;
     }
 
-    .section02-image01{
-        width: 150%;
-        height: auto;
+    .space{
+        background: rgb(29, 29, 29);
+        width: 100%;
+        height: 2.8125rem;
+    }
+    .section03{
+        padding-left: 7%;
+        padding-top: 3vh;
+        text-align: start;
+    }
+    .section03-text01, .section03-text02{
+        color: #cecdcd;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        font-size: 3.125rem;
+        font-weight: bold;
+        line-height: .8125rem;
+        opacity: 0;
+        transform: translateY(3.125rem);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+    .section03-text03, .section03-text04{
+        color: #969696;
+        font-weight: bold;
+        line-height: .3125rem;
+        opacity: 0;
+        transform: translateY(3.125rem);
+        transition: opacity 2s ease, transform 2s ease;
+    }
+
+    .section03-image{
+        margin-top: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(3.125rem);
+        transition: opacity 5s ease, transform 3s ease;
+    }
+
+    .section04 {
+        margin-top: 50vh;
+        position: relative ;
+        width: 100%;
+        height: 400vh;
+    }
+    .section04-text01{
+        position: sticky;
+        top:40vh;
+        height: 60vh;
+        color: #cecdcd;
+        font-weight: bold;
+        font-size: 3.125rem;
+        text-align: center;
+        line-height: .3125rem;
+        margin-top: 100vh;
+        margin-bottom: 200vh;
+        opacity: 0;
+        transform: translateY(3.125rem);
+        transition: opacity 2s ease, transform 3s ease;
+    }
+
+    .section04-text02{
+        position: sticky;
+        top:40vh;
+        height: 60vh;
+        color: #cecdcd;
+        font-weight: bold;
+        font-size: 3.125rem;
+        text-align: center;
+        line-height: .3125rem;
+        opacity: 0;
+        transform: translateY(3.125rem);
+        transition: opacity 2s ease, transform 3s ease;
+    }
+
+    .section04-vid{
+        position: relative ;
+        margin-top: 50vh;
+        width: 100%;
+        height: 200vh;
+        overflow: visible;
+    }
+
+    .section04-video{
+        position: sticky;
+        top: -10vh;
+        height: 60%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0; 
+        transition: opacity 2s ease-in-out; 
+        background: linear-gradient(to bottom, black, #1d1d1f);
+    }
+
+    .section05-conta{
+        margin-top: 50vh;
+        margin-bottom: 20vh;
+        background-color: black;
     }
 
     .section05{
         display: flex;
-        width: auto;
-        height: 75vh;
+        justify-content: center;
+        gap: 50px;
+        text-align: center;
+        margin-left: 8vh;
+        margin-right: 8vh;
+        background-color:#1d1d1f;
+        height: 100vh;
+        border-radius: 30px;
     }
 
-    .section05-item01{
-        margin-left: 3%;
-        padding-right: 10px;
-    }
-
-    .orange {
-        font-size: 15px;
-    }
-
-    .iphoneColor01 {
-        font-size: 30px;
-    }
-
-    .iphoneColor02 {
-        font-size: 15px;
-    }
-
-    .iphoneColor03 {
-        font-size: 15px;
-    }
-
-    .section05-item02{
-        padding-right: -20%;
-    }
-
-    .section05-text02 {
-        padding-top: 40px;
-        padding-left: 10px;
+    .section05-item01, .section05-item02{
+        margin-top: 8vh;
+        display: flex;
+        width: 300%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .iphone-flip-preview{
-        padding-left: 150px;
+        transform: translateX(5%);
+        width: 900px;
         height: auto;
     }
 
     .iphone16pro-preview{
-        margin-top: 80px;
+        transform: translateX(-75%);
+        margin-top: 10vh;
+        width: 280px;
+        height: auto;    
     }
 
-    .section05-text01 {
-        padding-left: 160px;
+    .section05-text01{
+        position: absolute;
+        margin-top: 32%;
+        margin-left: 4%;
+        text-align: center;
     }
 
-    .section05-item02 {
-        margin-top: 5%;
-        padding-left: 25%;
-    }
-
-    .iphone-flip-preview {
-        width: 200%;
-        height: auto;
-    }
-
-    .iphone16pro-preview{
-        width: 60%;
-        height: auto;
+    .section05-text02{
+        margin-top: 3.8%;
+        margin-left: -100%;
+        text-align: center;
     }
 
     .iphone-show{
+        color: white;
+        margin-left: 8vh;
+        font-size: 2.8125rem;
+        padding-bottom: 5vh;
+    }
+
+    .orange{
+        color: #ff791b;
+        font-size: 14px;
+    }
+
+    .section05-text{
+        padding: 20px;
         margin-left: 5vh;
+    }
+
+    .iphoneColor01, .iphoneColor02{
+        color: #F5F5F7;
+    } 
+
+    .iphoneColor01{
+        margin-top: -5px;
+        margin-bottom: 25px;
+        font-size: 35px;
+    }
+
+    .iphoneColor02{
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .iphoneColor03{
+        color: rgba(210, 210, 215, 0.559);
+        font-size: 15px;
+    }
+
+    .section05-text{
+        text-align: center;
+        padding-bottom: 10vh;
+        color: #969696;
+        font-weight: bold;
+    }
+
+    .iphone-menu{
+        background-color: #161617;
+        height: 90vh;
+        display: flex;
+        text-align: center;
+    }
+
+    .iPhone-menu-title{
+        font-size: 60px;
+        color: white;
+        padding-top: 10%;
+        padding-left: 10%;
+    }
+
+    .category-gener{
+        padding-top: 20%;
+        margin-left: -11%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .category-title{
+        color: rgba(210, 210, 215, 0.559);
+    }
+
+    .category01,.category02,.category03 {
+
+        width: 100%;
+    }
+
+    .category-text{
+        font-size: 30px;
+        margin-bottom: 15px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .category-text, .iphone-menu h1 {
+        color: #fff;
+        white-space: nowrap;
+    }
+
+    .footer{
+        margin-top: 3vh;
+        padding-left: .625rem;
+        padding-top: .625rem;
+        padding-bottom: 1.25rem;
+        border-top: .0625rem solid #4b4a4a;
+        display: flex;
+        background-color: rgb(20, 20, 20);
+    }
+    .footerLeft{
+        padding-left: 1.5625rem;
+        padding-right: 1.5625rem;
+        color: #969696;
+        font-size: .7813rem;
+    }
+    .footerCenter{
+        display: flex;
+        color: #c7c7c7;
+        font-size: .6563rem;
+        cursor: pointer;
+    }
+    .footerCenterA{
+        padding-right: .625rem;
+        border-right: .0625rem solid #4b4a4a;
+    }
+    .footerCenterB{
+        padding-left: .625rem;
+        padding-right: .625rem;
+        border-right: .0625rem solid #4b4a4a;
+    }
+    .footerCenterC{
+        padding-left: .625rem;
+        padding-right: .625rem;
+        border-right: .0625rem solid #4b4a4a;
+    }
+    .footerCenterD{
+        padding-left: .625rem;
+        padding-right: .625rem;
+        border-right: .0625rem solid #4b4a4a;
+    }
+    .footerCenterE{
+        padding-left: .625rem;
+    }
+    .footerCenterA:hover{
+        text-decoration: underline;
+    }
+    .footerCenterB:hover{
+        text-decoration: underline;
+    }
+    .footerCenterC:hover{
+        text-decoration: underline;
+    }
+    .footerCenterD:hover{
+        text-decoration: underline;
+    }
+    .footerCenterE:hover{
+        text-decoration: underline;
+    }
+    .footerRight{
+        position: absolute;
+        right: 1.875rem;
+        font-size: .75rem;
+        color: #c7c7c7;
+        cursor: pointer;
+    }
+
+    .prepare-contain{
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        gap: 10px;
     }
 
     .prepare-image{
         display: block;
         text-align: center;
-        height: 15vh;
-    }
-
-    .loading-contain {
-        width: 13vh;
-    }
-
-    .loading-bar {
-        height: 50%; 
+        height: 30vh;
     }
 
     .prepare-text{
-        font-size: 13px;
+        color: #c7c7c7;
+        text-align: center;
+        font-size: 15px;
     }
 
-    .iphone-menu {
-        height: 50vh;
-        width: auto;
+    .loading-contain {
+        width: 20vh;
+        height: 0.7vh;
+        background-color: black;
+        border-radius: 15px;
+        overflow: hidden; 
     }
 
-    .category-gener{
-        margin-left: -135px;
-        display: flex;
-        justify-content: left;
-        gap: 5px;
-        height: auto;
-        width: 70%;
+    .loading-bar {
+        height: 100%;
+        width: 0%; 
+        background-color: #c7c7c784;
+        border-radius: 15px;
+        animation: loading 5s linear infinite;  
     }
 
-    .iPhone-menu-title {
-        padding-top: 10px;
-        font-size: 300%;
+    @keyframes loading {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 100%; 
+        }
     }
 
-    .category-title{
-        font-size: 100%;
-    }
 
-    .category-text {
-        font-size: 80%;
+    @media(max-width: 53.125rem){
+        .store,.mac,.ipad,.iphone,.watch,.vision,
+        .airpods,.tvhome,.entertainment,.accessories,
+        .support,
+        .footerCenterA,.footerCenterB,.footerCenterC,.footerCenterD,
+        .footerCenterE{display: none;}
+
+        .mainBar{
+            display: flex;
+            justify-content: left;
+        }
+
+        .apple {
+            margin-left: 3vw;
+        }
+
+        .search-icon {
+            margin-right: -50px;
+        }
+        
+        .nav-item {
+            display: flex;
+            align-items: center;
+            margin-right: 1.6vw;
+        }
+
+        .search-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .underBar {
+            display: none;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .mainSection-Bar{
+            text-align: center;
+        }
+
+        .fadeImage{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 110%;
+        }
+
+        .section02-image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section02-image01{
+            width: 150%;
+            height: auto;
+        }
+
+        .section05{
+            display: flex;
+            width: auto;
+            height: 75vh;
+        }
+
+        .section05-item01{
+            margin-left: 3%;
+            padding-right: 10px;
+        }
+
+        .orange {
+            font-size: 15px;
+        }
+
+        .iphoneColor01 {
+            font-size: 30px;
+        }
+
+        .iphoneColor02 {
+            font-size: 15px;
+        }
+
+        .iphoneColor03 {
+            font-size: 15px;
+        }
+
+        .section05-item02{
+            padding-right: -20%;
+        }
+
+        .section05-text02 {
+            padding-top: 40px;
+            padding-left: 10px;
+        }
+
+        .iphone-flip-preview{
+            padding-left: 150px;
+            height: auto;
+        }
+
+        .iphone16pro-preview{
+            margin-top: 80px;
+        }
+
+        .section05-text01 {
+            padding-left: 160px;
+        }
+
+        .section05-item02 {
+            margin-top: 5%;
+            padding-left: 25%;
+        }
+
+        .iphone-flip-preview {
+            width: 200%;
+            height: auto;
+        }
+
+        .iphone16pro-preview{
+            width: 60%;
+            height: auto;
+        }
+
+        .iphone-show{
+            margin-left: 5vh;
+        }
+
+        .prepare-image{
+            display: block;
+            text-align: center;
+            height: 15vh;
+        }
+
+        .loading-contain {
+            width: 13vh;
+        }
+
+        .loading-bar {
+            height: 50%; 
+        }
+
+        .prepare-text{
+            font-size: 13px;
+        }
+
+        .iphone-menu {
+            height: 50vh;
+            width: auto;
+        }
+
+        .category-gener{
+            margin-left: -135px;
+            display: flex;
+            justify-content: left;
+            gap: 5px;
+            height: auto;
+            width: 70%;
+        }
+
+        .iPhone-menu-title {
+            padding-top: 10px;
+            font-size: 300%;
+        }
+
+        .category-title{
+            font-size: 100%;
+        }
+
+        .category-text {
+            font-size: 80%;
+        }
     }
-}

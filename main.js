@@ -1,3 +1,76 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const mainBar = document.querySelector(".mainBar");
+    const navItems = document.querySelectorAll(".nav-item");
+    const store = document.querySelector(".store");
+    const searchIcon = document.querySelector(".search-icon");
+    const backIcon = document.querySelector(".back");
+    const searchInput = document.getElementById("searchInput"); // searchInput 요소
+    let activeDropdown = null; // 현재 열려 있는 dropdown
+    let isFirstOpen = true; // 처음 열릴 때 애니메이션 적용 여부
+
+    // store 요소가 display: none이 아닌 경우에만 dropdown을 보여주는 함수
+    function isStoreVisible() {
+        return window.getComputedStyle(store).display !== "none";
+    }
+
+    // 모든 nav-item에 대해 드롭다운을 클릭 시만 보이도록 설정
+    navItems.forEach((item) => {
+        const dropdown = item.querySelector(".dropdown");
+
+        item.addEventListener("mouseenter", function () {
+            // 해당 nav-item에 마우스가 들어왔을 때 드롭다운을 보여줌
+            if (isStoreVisible()) {
+                dropdown.classList.add("open");
+                dropdown.classList.add("with-animation");
+                activeDropdown = dropdown;
+                mainBar.style.backgroundColor = "rgb(22, 22, 22)"; // 배경색 변경
+            }
+        });
+
+        item.addEventListener("mouseleave", function () {
+            // nav-item을 벗어났을 때 드롭다운을 숨김
+            dropdown.classList.remove("open", "with-animation");
+            activeDropdown = null;
+            mainBar.style.backgroundColor = ""; // 배경색 원래대로 복구
+        });
+    });
+
+    // search-icon과 back 아이콘 클릭 시 dropdown만 보이도록 설정
+    [searchIcon, backIcon].forEach((icon) => {
+        const dropdown = icon.closest('.nav-item').querySelector(".dropdown");
+
+        icon.addEventListener("click", function () {
+            if (dropdown.classList.contains("open")) {
+                dropdown.classList.remove("open", "with-animation");
+                mainBar.style.backgroundColor = ""; // 배경색 원래대로 복구
+                searchInput.value = ""; // searchInput 초기화
+            } else {
+                dropdown.classList.add("open");
+                dropdown.classList.add("with-animation");
+                mainBar.style.backgroundColor = "rgb(22, 22, 22)"; // 배경색 변경
+            }
+        });
+
+        dropdown.addEventListener("mouseleave", function () {
+            dropdown.classList.remove("open", "with-animation");
+            mainBar.style.backgroundColor = ""; // 배경색 원래대로 복구
+            searchInput.value = ""; // searchInput 초기화
+        });
+    });
+
+    // 드롭다운 애니메이션과 관련된 CSS 클래스를 추가
+    mainBar.addEventListener("mouseleave", function (event) {
+        if (!event.relatedTarget || !mainBar.contains(event.relatedTarget)) {
+            if (activeDropdown) {
+                activeDropdown.classList.remove("open", "with-animation");
+                activeDropdown = null;
+                mainBar.style.backgroundColor = ""; // 배경색 원래대로 복구
+                searchInput.value = ""; // searchInput 초기화
+            }
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const image = document.querySelector('.fadeImage');
     setTimeout(function(){
